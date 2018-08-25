@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teacher page</title>
+</head>
+<body>
+    <h2>Teacher page</h2>
+    <h3><a href="/">Home</a></h3><h3><a href="/teacher/add">Add Teacher</a></h3>
+    <table border="1px"; >
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Option</th>
+        </tr>
+        <% for (let i = 0; i < data.length; i++) {%>
+        <tr>
+            <td><%= data[i].id %></td>
+            <td><%= data[i].firstName %></td>
+            <td><%= data[i].lastName %></td>
+            <td><%= data[i].gender %></td>
+            <td><%= data[i].email %></td>
+            <td><%= data[i].phone %></td>
+            <td> <a href="/teacher/update/<%=data[i].id%>">Update</a> | <a href="/teacher/delete/<%=data[i].id%>">Delete</a> </td>
+        </tr>
+        <% } %>
+      </table> 
+</body>
+</html>

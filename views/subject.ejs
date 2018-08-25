@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subject page</title>
+</head>
+<body>
+    <h2>Subject page</h2>
+    <h3><a href="/">Home</a></h3><h3><a href="/subject/add">Add Subject</a></h3>
+    <table border="1px"; >
+        <tr>
+            <th>Id</th>
+            <th>Subject name</th>
+            <th>Option</th>
+        </tr>
+        <% for (let i = 0; i < data.length; i++) {%>
+        <tr>
+            <td><%= data[i].id %></td>
+            <td><%= data[i].subjectName %></td>
+            <td> <a href="/subject/update/<%=data[i].id%>">Update</a> | <a href="/subject/delete/<%=data[i].id%>">Delete</a> </td>
+        </tr>
+        <% } %>
+      </table> 
+</body>
+</html>
